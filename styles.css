@@ -31,7 +31,7 @@
   --color-orange-800: #8b4d34;
   --color-orange-900: #754935;
   --color-teal-300: #83989b;
-  --color-teal-600: #4b5b63;
+  --color-teal-600: #485b63;
   --color-teal-900: #102528;
   --color-blue-300: #69c1f1;
   --color-blue-700: #1069cf;
@@ -47,6 +47,25 @@
   --text-brand: var(--color-orange-400);
   --text-link: var(--color-blue-300);
   --text-link-hover: var(--color-orange-400);
+  --text-disabled: var(--color-teal-300);
+  --background-gradient-brand: linear-gradient(20deg, var(--color-orange-400), var(--color-orange-300));
+  --background-gradient-dark: radial-gradient(circle, var(--color-teal-300) 0%, var(--color-teal-600) 100%);
+  --background-gradient-testimonial: linear-gradient(180deg, var(--color-blue-300) 0%, var(--color-blue-700) 100%);
+  --space-xxxs: 4px;
+  --space-xxs: 8px;
+  --space-xs: 16px;
+  --space-s: 24px;
+  --space-m: 32px;
+  --space-l: 48px;
+  --space-xl: 64px;
+  --space-xxl: 80px;
+  --space-xxxl: 120px;
+  --radius-0: 0;
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 16px;
+  --radius-xl: 32px;
+  --radius-full: 999px;
   --orange: var(--color-orange-400);
   --orange-light: var(--color-orange-300);
   --ink: var(--color-teal-900);
@@ -221,6 +240,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .footer a { text-underline-offset: 4px; }
 .footer__grid > div:nth-child(2) a { text-decoration: none; }
 .footer__grid > div:nth-child(2) a:hover { color: var(--text-link-hover); }
+.footer__subtle-link { margin-top: 16px; opacity: .55; }
+.footer__subtle-link:hover, .footer__subtle-link:focus-visible { opacity: 1; }
 .footer__buttons { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
 .cursor-glow { position: fixed; z-index: 999; left: -90px; top: -90px; width: 180px; height: 180px; border-radius: 50%; background: radial-gradient(circle, rgba(238,119,0,.12), transparent 68%); pointer-events: none; mix-blend-mode: screen; }
 

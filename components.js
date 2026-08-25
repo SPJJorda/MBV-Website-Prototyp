@@ -1,25 +1,26 @@
 import { navigation, news, people, steps } from "./data.js";
 
 const asset = (name) => `/assets/${name}`;
+const homeHref = (href, homePrefix = "") => `${homePrefix}${href}`;
 
 export const Button = ({ label, kind = "primary", href = "#" }) =>
   `<a class="button button--${kind}" href="${href}"><span>${label}</span></a>`;
 
-export const Header = () => `
+export const Header = ({ homePrefix = "" } = {}) => `
   <header class="site-header" data-header>
-    <a class="brand" href="#top" aria-label="Münsterbauverein Freiburg – Startseite">
+    <a class="brand" href="${homeHref("#top", homePrefix)}" aria-label="Münsterbauverein Freiburg – Startseite">
       <img src="${asset("logo-mark.svg")}" alt="Münsterbauverein Freiburg" width="239" height="113" />
     </a>
     <nav class="desktop-nav" aria-label="Hauptnavigation">
-      ${navigation.map(([href, label]) => `<a href="${href}">${label}</a>`).join("")}
-      ${Button({ label: "Jetzt helfen", kind: "outline", href: "#helfen" })}
+      ${navigation.map(([href, label]) => `<a href="${homeHref(href, homePrefix)}">${label}</a>`).join("")}
+      ${Button({ label: "Jetzt helfen", kind: "outline", href: homeHref("#helfen", homePrefix) })}
     </nav>
     <button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" data-menu-toggle>
       <span></span><span></span><span></span>
     </button>
     <nav class="mobile-nav" aria-label="Mobile Navigation" data-mobile-nav>
-      ${navigation.map(([href, label]) => `<a href="${href}">${label}</a>`).join("")}
-      ${Button({ label: "Jetzt helfen", href: "#helfen" })}
+      ${navigation.map(([href, label]) => `<a href="${homeHref(href, homePrefix)}">${label}</a>`).join("")}
+      ${Button({ label: "Jetzt helfen", href: homeHref("#helfen", homePrefix) })}
     </nav>
   </header>`;
 
@@ -136,13 +137,13 @@ export const FinalCta = () => `
     </div>
   </section>`;
 
-export const Footer = () => `
+export const Footer = ({ homePrefix = "" } = {}) => `
   <footer class="footer" id="kontakt">
     <div class="shell"><img class="footer__logo" src="${asset("logo-mark.svg")}" alt="Münsterbauverein Freiburg" width="239" height="113" />
       <div class="footer__grid">
         <div><h2>Kontakt</h2><address>Freiburger Münsterbauverein e. V.<br />Schoferstraße 4<br />79098 Freiburg<br />Tel. 0761 214027-0<br /><a href="mailto:info@muensterbauverein-freiburg.de">info@muensterbauverein-freiburg.de</a></address></div>
-        <div><h2>Seiten</h2>${navigation.map(([href, label]) => `<a href="${href}">${label}</a>`).join("")}<a href="#helfen">Jetzt helfen</a></div>
-        <div><h2>Helfen Sie mit</h2><div class="footer__buttons">${Button({ label: "Steinpate werden", href: "#pate" })}${Button({ label: "Direkt spenden", href: "#kontakt" })}</div></div>
+        <div><h2>Seiten</h2>${navigation.map(([href, label]) => `<a href="${homeHref(href, homePrefix)}">${label}</a>`).join("")}<a href="${homeHref("#helfen", homePrefix)}">Jetzt helfen</a><a class="footer__subtle-link" href="/muster.html">Muster</a></div>
+        <div><h2>Helfen Sie mit</h2><div class="footer__buttons">${Button({ label: "Steinpate werden", href: homeHref("#pate", homePrefix) })}${Button({ label: "Direkt spenden", href: homeHref("#kontakt", homePrefix) })}</div></div>
       </div>
     </div>
   </footer>`;
