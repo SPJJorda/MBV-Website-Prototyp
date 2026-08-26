@@ -147,8 +147,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .step:nth-child(2) { background: var(--color-orange-800); }
 .step:nth-child(3) { background: var(--color-orange-700); }
 .step:nth-child(4) { background: var(--color-orange-600); }
-.step__number { position: absolute; top: 28px; right: 32px; font-size: 20px; line-height: 1; font-weight: 700; }
-.step__heading { display: flex; align-items: center; gap: 14px; padding-right: 42px; }
+.step__number { display: block; margin: 0 0 20px; font-size: 20px; line-height: 1; font-weight: 700; }
+.step__heading { display: flex; align-items: center; gap: 14px; }
 .step img { flex: 0 0 auto; width: 32px; height: 32px; object-fit: contain; transition: transform .45s cubic-bezier(.2,.75,.25,1); }
 .step:hover img, .step:focus-visible img { transform: scale(1.12) rotate(6deg); }
 .step h3 { margin: 0; font-size: 24px; line-height: 1.2; font-weight: 400; transition: transform .35s ease; }
