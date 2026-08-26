@@ -119,7 +119,6 @@ document.querySelectorAll("[data-next]").forEach((button) => button.addEventList
     const data = new FormData(form);
     const payment = document.querySelector('input[name="payment"]:checked')?.closest(".payment-method")?.querySelector("strong")?.textContent || "Überweisung";
     document.querySelector("[data-success-name]").textContent = data.get("firstName");
-    document.querySelector("[data-success-stone]").textContent = state.stone.label;
     document.querySelector("[data-success-card-stone]").textContent = state.stone.label;
     document.querySelector("[data-success-recipient]").textContent = patronageDescription();
     document.querySelector("[data-success-payment]").textContent = `${formatAmount()} · ${payment}`;

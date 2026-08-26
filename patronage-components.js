@@ -74,7 +74,7 @@ const PaymentPanel = () => `
       </fieldset>
       <aside class="order-summary" aria-labelledby="summary-title"><h3 id="summary-title">Ihre Patenschaft</h3><dl><div><dt>Stein</dt><dd data-summary-stone>–</dd></div><div><dt>Spende</dt><dd data-summary-amount>180,00 €</dd></div><div><dt>Patenschaft</dt><dd data-summary-name>–</dd></div><div><dt>Zahlungsart</dt><dd data-summary-payment>Überweisung</dd></div></dl><p class="order-summary__note">Prototyp – es wird keine Zahlung ausgelöst.</p></aside>
     </div>
-    <div class="flow-actions"><button class="flow-back" type="button" data-back>Zurück</button><button class="button button--primary" type="button" data-next><span>Patenschaft abschließen</span></button></div>
+    <div class="flow-actions"><button class="flow-back" type="button" data-back>Zurück</button><button class="button button--primary" type="button" data-next><span>Zur Zahlung</span></button></div>
   </section>`;
 
 const SuccessPanel = () => `
