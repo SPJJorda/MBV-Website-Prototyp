@@ -267,7 +267,7 @@ const SplitCta = () => `
     <div class="pattern-cta__panel">
       <h2 id="cta-title">Jeder Stein zählt!</h2>
       <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-      <div class="button-row">${Button({ label: "Steinpate werden", kind: "light", href: "/#pate" })}${Button({ label: "Direkt spenden", kind: "light", href: "/#kontakt" })}</div>
+      <div class="button-row">${Button({ label: "Steinpate werden", kind: "light", href: "/steinpate.html" })}${Button({ label: "Direkt spenden", kind: "light", href: "/#kontakt" })}</div>
     </div>
   </section>`;
 

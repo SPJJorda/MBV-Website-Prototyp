@@ -33,7 +33,7 @@ export const Hero = () => `
       <div class="hero__intro reveal">
         <p>Das Oktogon des Münsterturms<br />muss restauriert werden.<br /><strong>Jeder Stein zählt.</strong></p>
         <div class="button-row">
-          ${Button({ label: "Steinpate werden", href: "#pate" })}
+          ${Button({ label: "Steinpate werden", href: "/steinpate.html" })}
           ${Button({ label: "Direkt spenden", action: "donate", href: "#spenden" })}
         </div>
         <small>Ihre Spende geht an den Münsterbauverein Freiburg e. V.</small>
@@ -48,7 +48,7 @@ export const Patronage = () => `
       <div class="orange-panel">
         <h2 id="patronage-title">Werden Sie Steinpate!</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-        ${Button({ label: "Steinpate werden", kind: "light", href: "#helfen" })}
+        ${Button({ label: "Steinpate werden", kind: "light", href: "/steinpate.html" })}
       </div>
     </div>
     <ol class="steps" aria-label="In vier Schritten zur Patenschaft">
@@ -133,7 +133,7 @@ export const FinalCta = () => `
     <div class="orange-panel orange-panel--large reveal">
       <h2 id="final-title">Jeder Stein zählt!</h2>
       <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-      <div class="button-row">${Button({ label: "Steinpate werden", kind: "light", href: "#pate" })}${Button({ label: "Direkt spenden", kind: "light", href: "#kontakt" })}</div>
+      <div class="button-row">${Button({ label: "Steinpate werden", kind: "light", href: "/steinpate.html" })}${Button({ label: "Direkt spenden", kind: "light", href: "#kontakt" })}</div>
     </div>
   </section>`;
 
@@ -143,7 +143,7 @@ export const Footer = ({ homePrefix = "" } = {}) => `
       <div class="footer__grid">
         <div><h2>Kontakt</h2><address>Freiburger Münsterbauverein e. V.<br />Schoferstraße 4<br />79098 Freiburg<br />Tel. 0761 214027-0<br /><a href="mailto:info@muensterbauverein-freiburg.de">info@muensterbauverein-freiburg.de</a></address></div>
         <div><h2>Seiten</h2>${navigation.map(([href, label]) => `<a href="${homeHref(href, homePrefix)}">${label}</a>`).join("")}<a href="${homeHref("#helfen", homePrefix)}">Jetzt helfen</a><a class="footer__subtle-link" href="/muster.html">Muster</a></div>
-        <div><h2>Helfen Sie mit</h2><div class="footer__buttons">${Button({ label: "Steinpate werden", href: homeHref("#pate", homePrefix) })}${Button({ label: "Direkt spenden", href: homeHref("#kontakt", homePrefix) })}</div></div>
+        <div><h2>Helfen Sie mit</h2><div class="footer__buttons">${Button({ label: "Steinpate werden", href: "/steinpate.html" })}${Button({ label: "Direkt spenden", href: homeHref("#kontakt", homePrefix) })}</div></div>
       </div>
     </div>
   </footer>`;
