@@ -80,8 +80,8 @@ const PaymentPanel = () => `
 const SuccessPanel = () => `
   <section class="flow-panel flow-panel--success" data-flow-panel="3" aria-labelledby="success-title" hidden>
     <div class="success-mark" aria-hidden="true"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54"></circle><path d="m34 62 17 17 36-40"></path></svg></div>
-    <h2 class="brush-title" id="success-title"><span>Jeder Stein</span><span>zählt!</span></h2>
-    <p>Vielen Dank, <strong data-success-name></strong>. Ihre Patenschaft für <strong data-success-stone></strong> wurde in diesem Prototyp erfolgreich vorgemerkt.</p>
+    <h2 class="brush-title" id="success-title"><span>Sie werden jetzt</span><span>Steinpate!</span></h2>
+    <p>Vielen Dank, <strong data-success-name></strong>. Wir prüfen zeitnah Ihren Zahlungseingang und Sie erhalten dann Ihre Urkunde zur Steinpatenschaft. Herzlichen Dank!</p>
     <div class="success-card"><span>Ihre Auswahl</span><strong data-success-card-stone></strong><small data-success-recipient></small><small data-success-payment></small></div>
     <div class="button-row"><button class="button button--primary" type="button" data-restart><span>Einen weiteren Stein paten</span></button><a class="button button--outline" href="/"><span>Zurück zur Startseite</span></a></div>
   </section>`;
