@@ -51,7 +51,7 @@ const FormPanel = () => `
         ${Field({ label: "Nachname der Person", name: "recipientLastName", autocomplete: "off", placeholder: "Musterfrau", required: false })}
         <fieldset class="naming-choice patron-field--wide"><legend>Namentliche Nennung</legend><p>Soll die beschenkte Person namentlich genannt werden?</p><div><label><input type="radio" name="recipientPublic" value="yes" checked /><span>Ja, namentlich nennen</span></label><label><input type="radio" name="recipientPublic" value="no" /><span>Nein, anonym</span></label></div></fieldset>
       </div>
-      <div class="patron-field patron-field--wide"><label for="patron-amount">Höhe der Spende</label><select id="patron-amount" name="amount"><option value="120">120,00 €</option><option value="180" selected>180,00 €</option><option value="250">250,00 €</option><option value="500">500,00 €</option></select></div>
+      <input type="hidden" name="amount" value="180" />
       ${Field({ label: "Vorname", name: "firstName", autocomplete: "given-name", placeholder: "Max" })}
       ${Field({ label: "Nachname", name: "lastName", autocomplete: "family-name", placeholder: "Mustermann" })}
       ${Field({ label: "E-Mail", name: "email", type: "email", autocomplete: "email", placeholder: "info@mustermann.de" })}
