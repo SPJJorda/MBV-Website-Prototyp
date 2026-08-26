@@ -13,14 +13,14 @@ export const Header = ({ homePrefix = "" } = {}) => `
     </a>
     <nav class="desktop-nav" aria-label="Hauptnavigation">
       ${navigation.map(([href, label]) => `<a href="${homeHref(href, homePrefix)}">${label}</a>`).join("")}
-      ${Button({ label: "Jetzt helfen", kind: "outline", href: homeHref("#helfen", homePrefix) })}
+      ${Button({ label: "Steinpate werden", kind: "outline", href: "/steinpate.html" })}
     </nav>
     <button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" data-menu-toggle>
       <span></span><span></span><span></span>
     </button>
     <nav class="mobile-nav" aria-label="Mobile Navigation" data-mobile-nav>
       ${navigation.map(([href, label]) => `<a href="${homeHref(href, homePrefix)}">${label}</a>`).join("")}
-      ${Button({ label: "Jetzt helfen", href: homeHref("#helfen", homePrefix) })}
+      ${Button({ label: "Steinpate werden", href: "/steinpate.html" })}
     </nav>
   </header>`;
 
@@ -53,8 +53,9 @@ export const Patronage = () => `
     </div>
     <ol class="steps" aria-label="In vier Schritten zur Patenschaft">
       ${steps.map((step, index) => `<li class="step reveal" style="--step-index:${index}" tabindex="0">
-        <img src="${asset(step.icon)}" alt="" width="32" height="32" />
-        <h3>${step.title}</h3><p>${step.text}</p>
+        <span class="step__number" aria-hidden="true">${index + 1}.</span>
+        <div class="step__heading"><img src="${asset(step.icon)}" alt="" width="32" height="32" /><h3>${step.title}</h3></div>
+        <p>${step.text}</p>
       </li>`).join("")}
     </ol>
   </section>`;

@@ -2,7 +2,7 @@ export const steps = [
   { icon: "icon-diamond.svg", title: "Stein auswählen", text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr" },
   { icon: "icon-clipboard.svg", title: "Formular ausfüllen", text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr" },
   { icon: "icon-card.svg", title: "Zahlungsart auswählen", text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr" },
-  { icon: "icon-heart.svg", title: "Steinpate werden", text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr" }
+  { icon: "icon-heart.svg", title: "Steinpate sein", text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr" }
 ];
 
 export const people = [
@@ -21,7 +21,7 @@ export const news = [
 ];
 
 export const navigation = [
-  ["#turm", "Der Turm"],
+  ["#turm", "Das Oktogon"],
   ["#restaurierung", "Die Restaurierung"],
   ["#menschen", "Menschen für den Turm"],
   ["#aktuelles", "Aktuelles"],

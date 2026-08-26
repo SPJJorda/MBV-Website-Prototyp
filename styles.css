@@ -142,16 +142,18 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .orange-panel h2 { margin: 0 0 32px; font-size: clamp(38px, 2.5vw, 48px); line-height: 1.2; }
 .orange-panel > p { margin: 0 0 32px; font-size: clamp(18px, 1.25vw, 24px); line-height: 1.2; }
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin: 32px 0 0; padding: 0; color: var(--text-inverse); list-style: none; }
-.step { min-height: 193px; padding: 32px; background: var(--color-orange-900); transition-delay: calc(var(--step-index) * 80ms); transition-property: opacity, filter, transform, box-shadow; transition-duration: .45s; transition-timing-function: cubic-bezier(.2,.75,.25,1); }
+.step { position: relative; min-height: 193px; padding: 32px; background: var(--color-orange-900); transition-delay: calc(var(--step-index) * 80ms); transition-property: opacity, filter, transform, box-shadow; transition-duration: .45s; transition-timing-function: cubic-bezier(.2,.75,.25,1); }
 .step:hover, .step:focus-visible { z-index: 1; transform: translateY(-6px); box-shadow: 0 18px 34px rgba(16,37,40,.2); outline: none; }
 .step:nth-child(2) { background: var(--color-orange-800); }
 .step:nth-child(3) { background: var(--color-orange-700); }
 .step:nth-child(4) { background: var(--color-orange-600); }
-.step img { width: 32px; height: 32px; object-fit: contain; transition: transform .45s cubic-bezier(.2,.75,.25,1); }
+.step__number { position: absolute; top: 28px; right: 32px; font-size: 20px; line-height: 1; font-weight: 700; }
+.step__heading { display: flex; align-items: center; gap: 14px; padding-right: 42px; }
+.step img { flex: 0 0 auto; width: 32px; height: 32px; object-fit: contain; transition: transform .45s cubic-bezier(.2,.75,.25,1); }
 .step:hover img, .step:focus-visible img { transform: scale(1.12) rotate(6deg); }
-.step h3 { margin: 10px 0; font-size: 24px; line-height: 1.2; font-weight: 400; transition: transform .35s ease; }
+.step h3 { margin: 0; font-size: 24px; line-height: 1.2; font-weight: 400; transition: transform .35s ease; }
 .step:hover h3, .step:focus-visible h3 { transform: translateX(4px); }
-.step p { margin: 0; font-size: 16px; line-height: 1.5; }
+.step p { margin: 20px 0 0; font-size: 16px; line-height: 1.5; }
 
 .tower-story { --chapter-progress: 0; --chapter-reveal: 100%; --chapter-base-opacity: 1; --chapter-base-shift: 0px; --chapter-base-scale: 1.02; --chapter-next-opacity: 0; --chapter-next-shift: 34px; --chapter-next-scale: 1.04; position: relative; height: 240svh; color: var(--text-inverse); background: var(--background-inverse); }
 .chapter-anchor { position: absolute; top: 54%; }
@@ -223,7 +225,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .news-card__body > a { width: 36px; height: 36px; margin-top: auto; align-self: flex-end; transition: transform .35s cubic-bezier(.2,.75,.25,1); }
 .news-card:hover .news-card__body > a { transform: translate(4px,-4px) scale(1.06); }
 
-.final-cta { position: relative; display: grid; grid-template-columns: 1fr 1fr; min-height: 700px; }
+.final-cta { position: relative; display: grid; grid-template-columns: 1fr 1fr; height: clamp(480px, 45vw, 620px); min-height: 0; }
 .anchor-target { position: absolute; top: -86px; }
 .final-cta__image { overflow: hidden; }
 .final-cta__image img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; transition: transform .8s ease; }
@@ -322,9 +324,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .work-image--small { width: 72%; height: 230px; margin-left: auto; }
   .news-grid { width: auto; margin-left: 20px; margin-right: 0; padding-right: 20px; grid-auto-columns: 82vw; gap: 16px; }
   .news-card h3 { font-size: 26px; }
-  .final-cta { grid-template-columns: 1fr; }
-  .final-cta__image { height: 62svh; }
-  .orange-panel--large { padding: 70px 20px; }
+  .final-cta { grid-template-columns: 1fr; height: auto; }
+  .final-cta__image { height: 48svh; min-height: 380px; }
+  .orange-panel--large { padding: 56px 20px; }
   .footer { padding: 100px 0; }
   .footer__grid { grid-template-columns: 1fr; gap: 56px; }
   .cursor-glow { display: none; }
