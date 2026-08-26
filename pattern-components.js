@@ -177,7 +177,6 @@ const EditorialArticle = () => `
   <section class="pattern-section pattern-editorial section" aria-labelledby="editorial-title">
     <div class="shell pattern-editorial__grid">
       <header class="pattern-editorial__header reveal">
-        <p class="pattern-kicker">Editorial</p>
         <h2 class="brush-title" id="editorial-title"><span>Raum für</span><span>Geschichten.</span></h2>
         <p class="pattern-editorial__lead">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
       </header>
@@ -213,7 +212,6 @@ const TopicIndex = () => `
   <section class="pattern-section pattern-topics section" aria-labelledby="topics-title">
     <div class="shell pattern-topics__layout">
       <header class="pattern-topics__intro reveal">
-        <p class="pattern-kicker">Themenübersicht</p>
         <h2 id="topics-title">Inhalte mit Tiefe</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
       </header>
@@ -248,7 +246,6 @@ const ContactModule = () => `
   <section class="pattern-section pattern-contact section" aria-labelledby="contact-pattern-title">
     <div class="shell pattern-contact__grid">
       <div class="pattern-contact__copy reveal">
-        <p class="pattern-kicker">Kontaktmodul</p>
         <h2 class="brush-title" id="contact-pattern-title"><span>Im Austausch</span><span>bleiben.</span></h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
       </div>

@@ -15,7 +15,6 @@
 .patron-app__rail { position: sticky; top: 0; height: 100svh; min-height: 720px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; padding: 130px clamp(38px,4vw,76px) 70px; color: var(--text-inverse); background: var(--background-gradient-brand); }
 .patron-app__rail .brush-title { font-size: clamp(54px,4.8vw,92px); }
 .patron-app__rail > div:first-child > p:last-child { max-width: 390px; margin: var(--space-l) 0 0; font-size: 18px; line-height: 1.5; }
-.rail-kicker { margin: 0 0 var(--space-s); font-size: 14px; line-height: 1.2; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .rail-pixels { position: absolute; right: 3vw; bottom: 3vw; width: 12px; height: 12px; background: rgba(255,255,255,.7); box-shadow: -45px -8px 0 5px rgba(255,255,255,.28), -10px -52px 0 14px rgba(255,255,255,.25), 28px -96px 0 6px rgba(255,255,255,.36); }
 .patron-progress { display: grid; gap: var(--space-xs); margin: var(--space-xxl) 0 0; padding: 0; list-style: none; }
 .patron-progress li { display: grid; grid-template-columns: 18px 1fr; gap: 14px; align-items: center; color: rgba(255,255,255,.5); transition: color .3s ease, transform .3s ease; }
@@ -32,7 +31,6 @@
 .flow-panel[hidden] { display: none; }
 @keyframes panel-in { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
 .flow-heading { display: grid; grid-template-columns: 1fr minmax(280px,460px); gap: var(--space-s) var(--space-xl); align-items: end; margin-bottom: var(--space-xl); }
-.flow-heading > p { grid-column: 1 / -1; margin: 0; color: var(--text-brand); font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .flow-heading h2 { margin: 0; font-size: clamp(42px,3.5vw,66px); line-height: 1; }
 .flow-heading > span { font-size: 18px; line-height: 1.5; }
 
@@ -110,7 +108,6 @@
 .payment-method strong { margin-bottom: 4px; font-size: 20px; }
 .payment-method small { color: var(--text-secondary); font-size: 14px; }
 .order-summary { padding: var(--space-l); color: var(--text-inverse); background: var(--background-inverse); border-radius: var(--radius-l); }
-.order-summary > p:first-child { margin: 0 0 8px; color: var(--color-orange-300); font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .order-summary h3 { margin: 0 0 var(--space-l); font-size: 32px; }
 .order-summary dl { margin: 0; }
 .order-summary dl > div { display: flex; justify-content: space-between; gap: var(--space-m); padding: 15px 0; border-top: 1px solid rgba(255,255,255,.16); }
@@ -124,9 +121,8 @@
 .success-mark circle { fill: var(--color-orange-400); stroke: var(--color-orange-300); stroke-width: 3; }
 .success-mark path { fill: none; stroke: currentColor; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 80; animation: success-check .7s .2s both; }
 @keyframes success-check { from { stroke-dashoffset: 80; } to { stroke-dashoffset: 0; } }
-.success-kicker { margin: 0 0 var(--space-s); color: var(--text-brand); font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .flow-panel--success .brush-title { color: var(--text-brand); font-size: clamp(76px,7vw,132px); }
-.flow-panel--success > p:not(.success-kicker) { max-width: 660px; margin: var(--space-xl) 0; font-size: 22px; line-height: 1.5; }
+.flow-panel--success > p { max-width: 660px; margin: var(--space-xl) 0; font-size: 22px; line-height: 1.5; }
 .success-card { min-width: min(520px,100%); display: flex; flex-direction: column; gap: 7px; margin-bottom: var(--space-l); padding: var(--space-m); color: var(--text-inverse); background: var(--background-inverse); border-radius: var(--radius-m); }
 .success-card span, .success-card small { color: var(--color-teal-300); }
 .success-card strong { font-size: 28px; }
@@ -180,7 +176,7 @@
   .order-summary { padding: var(--space-m) var(--space-s); }
   .flow-panel--success { min-height: 650px; }
   .flow-panel--success .brush-title { font-size: 66px; }
-  .flow-panel--success > p:not(.success-kicker) { font-size: 18px; }
+  .flow-panel--success > p { font-size: 18px; }
   .success-card { min-width: 100%; }
   .flow-panel--success .button-row { width: 100%; }
   .flow-panel--success .button { width: 100%; }
