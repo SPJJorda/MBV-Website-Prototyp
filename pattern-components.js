@@ -173,6 +173,94 @@ const Faq = () => `
     </div>
   </section>`;
 
+const EditorialArticle = () => `
+  <section class="pattern-section pattern-editorial section" aria-labelledby="editorial-title">
+    <div class="shell pattern-editorial__grid">
+      <header class="pattern-editorial__header reveal">
+        <p class="pattern-kicker">Editorial</p>
+        <h2 class="brush-title" id="editorial-title"><span>Raum für</span><span>Geschichten.</span></h2>
+        <p class="pattern-editorial__lead">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+      </header>
+      <div class="pattern-editorial__body reveal">
+        <p class="pattern-editorial__dropcap">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+        <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+        <blockquote>„Lorem ipsum dolor sit amet, consetetur sadipscing elitr.“</blockquote>
+        <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      </div>
+      <figure class="pattern-editorial__figure reveal">
+        <img src="${asset("work-02.jpg")}" alt="Detail eines historischen Sandsteinornaments" loading="lazy" />
+        <figcaption>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</figcaption>
+      </figure>
+    </div>
+  </section>`;
+
+const Timeline = () => `
+  <section class="pattern-section pattern-timeline section" aria-labelledby="timeline-title">
+    <div class="shell">
+      ${PatternHeading({ title: "Chronik", text: "Längere Entwicklungen lassen sich in klar gegliederten Etappen erzählen, ohne den Lesefluss zu unterbrechen." }).replace("<h2>", '<h2 id="timeline-title">')}
+      <div class="pattern-timeline__list">
+        ${[
+          ["Ursprung", "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."],
+          ["Bewahren", "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."],
+          ["Heute", "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."],
+          ["Morgen", "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. At vero eos et accusam et justo duo dolores et ea rebum."]
+        ].map(([title, text]) => `<article class="pattern-timeline__item reveal"><span class="pattern-timeline__dot" aria-hidden="true"></span><h3>${title}</h3><p>${text}</p></article>`).join("")}
+      </div>
+    </div>
+  </section>`;
+
+const TopicIndex = () => `
+  <section class="pattern-section pattern-topics section" aria-labelledby="topics-title">
+    <div class="shell pattern-topics__layout">
+      <header class="pattern-topics__intro reveal">
+        <p class="pattern-kicker">Themenübersicht</p>
+        <h2 id="topics-title">Inhalte mit Tiefe</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+      </header>
+      <div class="pattern-topics__list">
+        ${[
+          ["Baukultur", "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."],
+          ["Handwerk", "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."],
+          ["Gemeinschaft", "Lorem ipsum dolor sit amet, consetetur sadipscing elitr. At vero eos et accusam et justo duo dolores et ea rebum."],
+          ["Vermittlung", "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet, consetetur sadipscing elitr."]
+        ].map(([title, text]) => `<article class="pattern-topics__item reveal"><div><h3>${title}</h3><p>${text}</p></div><a href="/#arbeit" aria-label="${title}: mehr erfahren"><img src="${asset("icon-arrow.svg")}" alt="" width="36" height="36" /></a></article>`).join("")}
+      </div>
+    </div>
+  </section>`;
+
+const ImageGallery = () => `
+  <section class="pattern-section pattern-gallery section" aria-labelledby="gallery-title">
+    <div class="shell">
+      ${PatternHeading({ title: "Bilderstrecke", text: "Ein variables Bildraster schafft Rhythmus und bietet Raum für Details, Arbeit und Atmosphäre." }).replace("<h2>", '<h2 id="gallery-title">')}
+      <div class="pattern-gallery__grid">
+        ${[
+          ["work-03.jpg", "Handwerk", "Steinmetz bei der Arbeit"],
+          ["image-06.jpg", "Detail", "Architektonisches Detail am Freiburger Münster"],
+          ["tower-sunset.jpg", "Turm", "Freiburger Münsterturm im Abendlicht"],
+          ["image-13.jpg", "Substanz", "Historisches Detail des Münsters"],
+          ["work-01.jpg", "Bewahren", "Restauriertes Sandsteinornament"]
+        ].map(([image, label, alt]) => `<figure class="pattern-gallery__item reveal"><img src="${asset(image)}" alt="${alt}" loading="lazy" /><figcaption>${label}</figcaption></figure>`).join("")}
+      </div>
+    </div>
+  </section>`;
+
+const ContactModule = () => `
+  <section class="pattern-section pattern-contact section" aria-labelledby="contact-pattern-title">
+    <div class="shell pattern-contact__grid">
+      <div class="pattern-contact__copy reveal">
+        <p class="pattern-kicker">Kontaktmodul</p>
+        <h2 class="brush-title" id="contact-pattern-title"><span>Im Austausch</span><span>bleiben.</span></h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+      </div>
+      <form class="pattern-contact__form reveal" data-pattern-form>
+        <div class="pattern-field"><label for="pattern-name">Name</label><input id="pattern-name" name="name" type="text" autocomplete="name" required /></div>
+        <div class="pattern-field"><label for="pattern-email">E-Mail</label><input id="pattern-email" name="email" type="email" autocomplete="email" required /></div>
+        <div class="pattern-field pattern-field--wide"><label for="pattern-message">Nachricht</label><textarea id="pattern-message" name="message" rows="4" required></textarea></div>
+        <div class="pattern-contact__action"><button class="button button--primary" type="submit"><span>Nachricht senden</span></button><p class="pattern-contact__status" role="status" aria-live="polite"></p></div>
+      </form>
+    </div>
+  </section>`;
+
 const SplitCta = () => `
   <section class="pattern-section pattern-cta" aria-labelledby="cta-title">
     <div class="pattern-cta__image"><img src="${asset("final-statue.jpg")}" alt="Restaurierter Engel am Freiburger Münster" loading="lazy" /></div>
@@ -209,6 +297,11 @@ export const PatternPage = () => `
       ${Process()}
       ${ImpactBand()}
       ${Faq()}
+      ${EditorialArticle()}
+      ${Timeline()}
+      ${TopicIndex()}
+      ${ImageGallery()}
+      ${ContactModule()}
       ${SplitCta()}
     </div>
   </main>

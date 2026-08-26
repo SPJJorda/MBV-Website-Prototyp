@@ -55,3 +55,11 @@ if (!reduceMotion && matchMedia("(pointer: fine)").matches) {
     });
   });
 }
+
+const patternForm = document.querySelector("[data-pattern-form]");
+patternForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const status = patternForm.querySelector(".pattern-contact__status");
+  status.textContent = "Vielen Dank. Das Formular ist als Muster erfolgreich geprüft.";
+  patternForm.classList.add("is-sent");
+});
