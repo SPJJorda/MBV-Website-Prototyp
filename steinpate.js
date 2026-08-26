@@ -12,6 +12,8 @@ const alert = document.querySelector("[data-flow-alert]");
 const tooltip = document.querySelector("[data-stone-tooltip]");
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const state = { step: 0, stone: null };
+const giftFields = document.querySelector("[data-gift-fields]");
+const giftRequiredFields = [...giftFields.querySelectorAll('input[name="recipientFirstName"], input[name="recipientLastName"]')];
 
 const closeMenu = () => {
   menuToggle.setAttribute("aria-expanded", "false");
@@ -39,13 +41,24 @@ const showAlert = (message) => {
 
 const formatAmount = () => `${Number(form.elements.amount.value).toLocaleString("de-DE", { minimumFractionDigits: 2 })} €`;
 
-const syncSummary = () => {
+const patronageDescription = () => {
   const data = new FormData(form);
-  const fullName = `${data.get("firstName") || ""} ${data.get("lastName") || ""}`.trim();
+  if (data.get("patronageType") !== "gift") return "Für mich selbst";
+  const recipient = `${data.get("recipientFirstName") || ""} ${data.get("recipientLastName") || ""}`.trim();
+  return `${recipient || "Als Geschenk"} · ${data.get("recipientPublic") === "yes" ? "namentliche Nennung" : "anonym"}`;
+};
+
+const updatePatronageMode = () => {
+  const isGift = form.elements.patronageType.value === "gift";
+  giftFields.hidden = !isGift;
+  giftRequiredFields.forEach((field) => { field.required = isGift; });
+};
+
+const syncSummary = () => {
   const selectedPayment = document.querySelector('input[name="payment"]:checked')?.closest(".payment-method")?.querySelector("strong")?.textContent || "Überweisung";
   document.querySelector("[data-summary-stone]").textContent = state.stone?.label || "–";
   document.querySelector("[data-summary-amount]").textContent = formatAmount();
-  document.querySelector("[data-summary-name]").textContent = fullName || "–";
+  document.querySelector("[data-summary-name]").textContent = patronageDescription();
   document.querySelector("[data-summary-payment]").textContent = selectedPayment;
 };
 
@@ -108,6 +121,7 @@ document.querySelectorAll("[data-next]").forEach((button) => button.addEventList
     document.querySelector("[data-success-name]").textContent = data.get("firstName");
     document.querySelector("[data-success-stone]").textContent = state.stone.label;
     document.querySelector("[data-success-card-stone]").textContent = state.stone.label;
+    document.querySelector("[data-success-recipient]").textContent = patronageDescription();
     document.querySelector("[data-success-payment]").textContent = `${formatAmount()} · ${payment}`;
   }
   setStep(Math.min(3, state.step + 1));
@@ -115,12 +129,15 @@ document.querySelectorAll("[data-next]").forEach((button) => button.addEventList
 
 document.querySelectorAll("[data-back]").forEach((button) => button.addEventListener("click", () => setStep(Math.max(0, state.step - 1))));
 document.querySelectorAll('input[name="payment"]').forEach((input) => input.addEventListener("change", syncSummary));
+document.querySelectorAll('input[name="patronageType"]').forEach((input) => input.addEventListener("change", updatePatronageMode));
 form.elements.amount.addEventListener("change", syncSummary);
+updatePatronageMode();
 
 document.querySelector("[data-restart]").addEventListener("click", () => {
   document.querySelector(".stone.is-selected")?.classList.remove("is-selected");
   state.stone = null;
   form.reset();
+  updatePatronageMode();
   document.querySelector("[data-selected-label]").textContent = "Noch kein Stein ausgewählt";
   document.querySelector(".flow-panel--select [data-next]").disabled = true;
   setStep(0);
