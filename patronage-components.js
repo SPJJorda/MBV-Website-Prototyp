@@ -90,7 +90,7 @@ const Intro = () => `
   <section class="patron-hero" id="top" aria-labelledby="patron-page-title">
     <div class="patron-hero__glow" aria-hidden="true"></div>
     <div class="shell patron-hero__content">
-      <h1 class="brush-title" id="patron-page-title"><span>Jeder Stein</span><span>zählt!</span></h1>
+      <h1 class="brush-title" id="patron-page-title"><span>Steinpate</span><span>werden</span></h1>
       <div class="patron-hero__intro"><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p><a class="button button--outline" href="#patenschaft"><span>Stein auswählen</span></a></div>
     </div>
   </section>`;
