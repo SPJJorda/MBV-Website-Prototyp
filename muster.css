@@ -146,7 +146,7 @@
 .pattern-timeline__item h3 { margin: 0 0 var(--space-s); font-size: 34px; }
 .pattern-timeline__item p { margin: 0; color: rgba(255,255,255,.8); font-size: 17px; line-height: 1.6; }
 
-.pattern-topics { background: var(--background-subtle); }
+.pattern-topics { background: var(--background-default); }
 .pattern-topics__layout { display: grid; grid-template-columns: minmax(280px,.7fr) minmax(480px,1.3fr); gap: clamp(70px,10vw,190px); }
 .pattern-topics__intro { position: sticky; top: 140px; align-self: start; }
 .pattern-topics__intro h2 { margin: 0 0 var(--space-m); font-size: clamp(48px,4vw,76px); line-height: 1; }
