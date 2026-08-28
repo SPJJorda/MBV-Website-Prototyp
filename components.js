@@ -110,10 +110,21 @@ export const Work = () => `
     <figure class="work-image work-image--large reveal"><img src="${asset("work-03.jpg")}" alt="Steinmetz bei der Arbeit in der Münsterbauhütte" loading="lazy" /></figure>
     <p class="work-copy work-copy--detail reveal">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
     <figure class="work-image work-image--small reveal"><img src="${asset("work-02.jpg")}" alt="Historisches Sandsteinornament" loading="lazy" /></figure>
-    <aside class="work-affiliation reveal" aria-label="Freiburger Münsterbauverein">
-      <span>Ein Projekt des</span>
-      <img src="${asset("mbv-logo-positive.png")}" alt="Freiburger Münsterbauverein e. V." width="531" height="342" loading="lazy" />
-    </aside>
+  </section>`;
+
+export const WorkPartner = () => `
+  <section class="work-partner" aria-labelledby="work-partner-title">
+    <div class="work-partner__inner shell">
+      <div class="work-partner__portrait reveal" role="img" aria-label="Vorgesehener Platz für ein Portrait- oder Teambild des Freiburger Münsterbauvereins">
+        <span>Portrait / Teambild</span>
+      </div>
+      <div class="work-partner__content reveal">
+        <img class="work-partner__logo" src="${asset("mbv-logo-positive.png")}" alt="Freiburger Münsterbauverein e. V." width="531" height="342" loading="lazy" />
+        <h2 id="work-partner-title">Gemeinsam für das Freiburger Münster.</h2>
+        <p>Der Freiburger Münsterbauverein e. V. setzt sich für den Erhalt des Freiburger Münsters ein. Die Arbeit verbindet historische Verantwortung, handwerkliches Können und die Unterstützung vieler Menschen.</p>
+        <p>So bleibt dieses einzigartige Bauwerk auch für kommende Generationen erhalten – Stein für Stein.</p>
+      </div>
+    </div>
   </section>`;
 
 export const News = () => `
@@ -155,4 +166,4 @@ export const Footer = ({ homePrefix = "" } = {}) => `
 
 export const Dialog = () => "";
 
-export const Page = () => `${Header()}<main id="main">${Hero()}${Patronage()}${TowerStory()}${People()}${Work()}${News()}${FinalCta()}</main>${Footer()}`;
+export const Page = () => `${Header()}<main id="main">${Hero()}${Patronage()}${TowerStory()}${People()}${Work()}${WorkPartner()}${News()}${FinalCta()}</main>${Footer()}`;
