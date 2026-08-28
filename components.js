@@ -110,6 +110,10 @@ export const Work = () => `
     <figure class="work-image work-image--large reveal"><img src="${asset("work-03.jpg")}" alt="Steinmetz bei der Arbeit in der Münsterbauhütte" loading="lazy" /></figure>
     <p class="work-copy work-copy--detail reveal">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
     <figure class="work-image work-image--small reveal"><img src="${asset("work-02.jpg")}" alt="Historisches Sandsteinornament" loading="lazy" /></figure>
+    <aside class="work-affiliation reveal" aria-label="Freiburger Münsterbauverein">
+      <span>Ein Projekt des</span>
+      <img src="${asset("mbv-logo-positive.png")}" alt="Freiburger Münsterbauverein e. V." width="531" height="342" loading="lazy" />
+    </aside>
   </section>`;
 
 export const News = () => `
@@ -140,7 +144,7 @@ export const FinalCta = () => `
 
 export const Footer = ({ homePrefix = "" } = {}) => `
   <footer class="footer" id="kontakt">
-    <div class="shell"><img class="footer__logo" src="${asset("logo-mark.svg")}" alt="Münsterbauverein Freiburg" width="239" height="113" />
+    <div class="shell"><div class="footer__brand-lockup"><img class="footer__logo" src="${asset("logo-mark.svg")}" alt="Unser Turm" width="239" height="113" /><img class="footer__partner-logo" src="${asset("mbv-logo-negative.png")}" alt="Freiburger Münsterbauverein e. V." width="531" height="342" /></div>
       <div class="footer__grid">
         <div><h2>Kontakt</h2><address>Freiburger Münsterbauverein e. V.<br />Schoferstraße 4<br />79098 Freiburg<br />Tel. 0761 214027-0<br /><a href="mailto:info@muensterbauverein-freiburg.de">info@muensterbauverein-freiburg.de</a></address></div>
         <div><h2>Seiten</h2>${navigation.map(([href, label]) => `<a href="${homeHref(href, homePrefix)}">${label}</a>`).join("")}<a href="${homeHref("#helfen", homePrefix)}">Jetzt helfen</a><a class="footer__subtle-link" href="/muster.html">Muster</a></div>
