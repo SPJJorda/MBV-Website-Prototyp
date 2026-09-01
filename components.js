@@ -115,8 +115,8 @@ export const Work = () => `
 export const WorkPartner = () => `
   <section class="work-partner" aria-labelledby="work-partner-title">
     <div class="work-partner__visuals" aria-label="Vorgesehene Plätze für Portrait- oder Teambilder des Freiburger Münsterbauvereins">
-      <div class="work-partner__image work-partner__image--large reveal" role="img" aria-label="Platzhalter für ein großes Portrait- oder Teambild"></div>
-      <div class="work-partner__image work-partner__image--small reveal" role="img" aria-label="Platzhalter für ein ergänzendes Portrait- oder Teambild"></div>
+      <img class="work-partner__image work-partner__image--large reveal" src="${asset("mbv-turm-1.webp")}" alt="Restauriertes Maßwerk am Freiburger Münsterturm" loading="lazy" />
+      <img class="work-partner__image work-partner__image--small reveal" src="${asset("mbv-turm-2.webp")}" alt="Gemeinsames Engagement für das Freiburger Münster" loading="lazy" />
     </div>
     <div class="work-partner__inner shell">
       <div class="work-partner__content reveal">
