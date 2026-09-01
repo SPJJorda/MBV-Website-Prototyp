@@ -122,8 +122,8 @@ export const WorkPartner = () => `
       <div class="work-partner__content reveal">
         <img class="work-partner__logo" src="${asset("mbv-logo-positive.png")}" alt="Freiburger Münsterbauverein e. V." width="531" height="342" loading="lazy" />
         <h2 id="work-partner-title">Gemeinsam für das Freiburger Münster.</h2>
-        <p>Der Freiburger Münsterbauverein e. V. setzt sich für den Erhalt des Freiburger Münsters ein. Die Arbeit verbindet historische Verantwortung, handwerkliches Können und die Unterstützung vieler Menschen.</p>
-        <p>So bleibt dieses einzigartige Bauwerk auch für kommende Generationen erhalten – Stein für Stein.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
       </div>
     </div>
   </section>`;
