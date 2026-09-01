@@ -6,8 +6,8 @@ const homeHref = (href, homePrefix = "") => `${homePrefix}${href}`;
 export const Button = ({ label, kind = "primary", href = "#" }) =>
   `<a class="button button--${kind}" href="${href}"><span>${label}</span></a>`;
 
-export const Header = ({ homePrefix = "" } = {}) => `
-  <header class="site-header" data-header>
+export const Header = ({ homePrefix = "", intro = false } = {}) => `
+  <header class="site-header${intro ? " site-header--intro" : ""}" data-header>
     <a class="brand" href="${homeHref("#top", homePrefix)}" aria-label="Münsterbauverein Freiburg – Startseite">
       <img src="${asset("logo-mark.svg")}" alt="Münsterbauverein Freiburg" width="239" height="113" />
     </a>
@@ -26,11 +26,11 @@ export const Header = ({ homePrefix = "" } = {}) => `
 
 export const Hero = () => `
   <section class="hero" id="top" aria-labelledby="hero-title">
-    <div class="hero__image" data-parallax></div>
+    <div class="hero__image"><div class="hero__image-media" data-parallax></div></div>
     <div class="hero__shade"></div>
     <div class="hero__content shell">
       <h1 class="brush-title hero__title" id="hero-title"><span>Liegt in</span><span>deiner Hand.</span></h1>
-      <div class="hero__intro reveal">
+      <div class="hero__intro">
         <p>Das Oktogon des Münsterturms<br />muss restauriert werden.<br /><strong>Jeder Stein zählt.</strong></p>
         <div class="button-row">
           ${Button({ label: "Steinpate werden", href: "/steinpate.html" })}
@@ -167,4 +167,4 @@ export const Footer = ({ homePrefix = "" } = {}) => `
 
 export const Dialog = () => "";
 
-export const Page = () => `${Header()}<main id="main">${Hero()}${Patronage()}${TowerStory()}${People()}${Work()}${WorkPartner()}${News()}${FinalCta()}</main>${Footer()}`;
+export const Page = () => `${Header({ intro: true })}<main id="main">${Hero()}${Patronage()}${TowerStory()}${People()}${Work()}${WorkPartner()}${News()}${FinalCta()}</main>${Footer()}`;
